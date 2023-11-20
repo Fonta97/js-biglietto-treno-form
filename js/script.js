@@ -30,7 +30,7 @@ sendButton.addEventListener("click",
         }
         console.log(priceKm, finalPrice)
 
-
         console.log(finalPrice)
     }
 )
+
