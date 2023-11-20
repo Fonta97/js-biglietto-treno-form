@@ -20,17 +20,25 @@ sendButton.addEventListener("click",
         // calcolo sconto se presente
         if (etasconto == "minorenne") {
             finalPrice = priceKm * 0.8
-            document.getElementById("ticket_price").innerHTML = nome + ", ecco il tuo prezzo scontato da minorenne: " + finalPrice + " €";
+
         } else if (etasconto == "over65") {
             finalPrice = priceKm * 0.6
-            document.getElementById("ticket_price").innerHTML = nome + ", ecco il tuo prezzo scontato over65: " + finalPrice + " €";
+
         } else {
             finalPrice = priceKm
-            document.getElementById("ticket_price").innerHTML = nome + ", ecco il tuo prezzo: " + finalPrice + " €";
-        }
-        console.log(priceKm, finalPrice)
 
-        console.log(finalPrice)
+        }
+
+        // calcolo numero randomico per carrozza e CP
+        let randomnumero = Math.floor(Math.random() * 10) + 1
+        let randomdiecimila = Math.floor(Math.random() * 10000) + 999
+
+        // visualizzazione risultati e toggle scheda
+        document.getElementsById("ticket_box").style.display = 'block';
+        document.getElementById("ticket_price").innerHTML = finalPrice.toFixed(2) + " €";
+        document.getElementById("randomCarrozza").innerHTML = randomnumero;
+        document.getElementById("randomCP").innerHTML = randomdiecimila;
+        document.getElementById("passeggero").innerHTML = nome;
     }
 )
 

@@ -2,6 +2,6 @@
     box-sizing: border-box;
 }
 
-.ticket_box {
-    /* display: none; */
+#ticket_box {
+    display: none;
 }
